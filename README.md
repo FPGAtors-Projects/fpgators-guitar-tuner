@@ -17,7 +17,7 @@ To build an intuitive, step-by-step understanding of the FFT, hardware accelerat
    - Implement the FFT in C/C++ with fixed-point arithmetic (`ap_fixed`) using Vitis HLS.
    - Focus on algorithmic structure, loop pipelining, and dataflow optimization without writing raw register logic.
 3. **Iteration 3: Register-Transfer Level (RTL)**
-   - Begin with the baseline pipelined FFT architecture detailed in [Tan F. Wong's RFSoC Notes (Chapter 8: FFT Implementation)](https://tanfwong.github.io/rfsoc_notes/ch8/impl.html) to understand the foundational hardware structure.
+   - Begin with the baseline pipelined FFT architecture detailed in [Dr. Wong's RFSoC Notes (Chapter 8: FFT Implementation)](https://tanfwong.github.io/rfsoc_notes/ch8/impl.html) to understand the foundational hardware structure.
    - Branch off into our own custom RTL core built from the ground up in Verilog / SystemVerilog, optimizing the butterfly pipeline stages, twiddle-factor storage/addressing, throughput, and resource footprint.
    - Gain a cycle-accurate understanding of hardware DSP architectures.
 
@@ -72,31 +72,31 @@ flowchart LR
     M4 --> M5[5. Real-Time Integration\nGPIO & Demo]
 ```
 
-### Milestone 1: Audio Spectrum & Golden Model (Weeks 1–3)
+### Milestone 1: Audio Spectrum & Golden Model 
 - Analyze guitar waveforms, harmonics, and windowing functions.
 - Write a Python / MATLAB script to read audio, compute the FFT, and identify fundamental pitch.
 - Choose FFT size ($N$) and sampling frequency ($f_s$) to balance latency and frequency resolution.
 - Export reference test vectors for hardware verification.
 
-### Milestone 2: XADC Hardware Setup (Weeks 4–6)
+### Milestone 2: XADC Hardware Setup 
 - Connect and bias analog input signal within the XADC's 0–1V range.
 - Configure XADC Hard IP in Vivado.
 - Buffer continuous audio samples into BRAM / FIFO.
 - Verify captured samples via ILA or UART printout.
 
-### Milestone 3: FFT Iteration 1 — HLS (Weeks 7–9)
+### Milestone 3: FFT Iteration 1 
 - Write Cooley-Tukey FFT in C/C++ using fixed-point types.
 - Apply HLS optimization directives (pipelining, unrolling, partitioning).
 - Verify outputs against Python test vectors using C/RTL co-simulation.
 - Package core as an AXI IP block for integration into Vivado.
 
-### Milestone 4: FFT Iteration 2 — Custom RTL (Weeks 10–12)
-- Study and bring up the baseline pipelined FFT structure based on [Tan Wong's RFSoC Chapter 8](https://tanfwong.github.io/rfsoc_notes/ch8/impl.html).
+### Milestone 4: FFT Iteration 2 
+- Study and bring up the baseline pipelined FFT structure based on [Dr. Wong's RFSoC Chapter 8](https://tanfwong.github.io/rfsoc_notes/ch8/impl.html).
 - Design and build our custom FFT module from the ground up in Verilog / SystemVerilog with optimized butterfly pipeline stages, twiddle lookup tables, and addressing logic.
 - Simulate in Vivado Simulator to match reference vectors.
 - Benchmark and compare against HLS: resource utilization (LUTs, FFs, DSPs, BRAM), cycle latency, and throughput.
 
-### Milestone 5: System Integration & Real-Time Demo (Weeks 13–14)
+### Milestone 5: System Integration & Real-Time Demo
 - Integrate peak detector and note classifier with real-time audio pipeline.
 - Drive onboard LEDs (flat, in-tune, sharp indicators).
 - Test live with a guitar.
@@ -108,9 +108,4 @@ flowchart LR
 - **Members:** Any club member is welcome to participate; no prior FPGA experience required.
 - **Roles:** None assigned—members can rotate through hardware, RTL, HLS, software, and testing.
 
----
-
-## License
-
-This project is licensed under the terms in [LICENSE](LICENSE).
 
