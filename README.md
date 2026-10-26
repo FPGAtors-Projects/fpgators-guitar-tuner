@@ -6,6 +6,15 @@ An analog audio signal is sampled using the Zynq-7000's built-in Hard IP Analog-
 
 ---
 
+Tools: Vivado / Vitis 2024.2
+Board: Zybo Z7-10
+Hardware source: platform_project/platform_project.xpr
+Hardware export: fixed XSA, including bitstream
+Vitis platform component name: platform
+Processor: ps7_cortexa9_0
+OS/domain: standalone
+UART stdin/stdout: ps7_uart_1
+
 ## Learning Path & Implementation Strategy
 
 To build an intuitive, step-by-step understanding of the FFT, hardware acceleration, and DSP, the project uses three separate iterations of increasing design complexity:

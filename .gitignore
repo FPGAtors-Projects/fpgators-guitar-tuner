@@ -36,6 +36,10 @@ Thumbs.db
 # Unused reference copy; Vivado uses the imported project copy
 /Zybo-Z7-Master.xdc
 
+# Vivado block-design editor layout
+/platform_project/platform_project.srcs/sources_1/bd/*/ui/
+
+
 # ============================================================
 # Tool logs and local session state
 # ============================================================
@@ -49,6 +53,10 @@ Thumbs.db
 _ide/
 .metadata/
 .rigel/
+.rigel_lopper/
+
+# Generated application editor configuration
+/vitis_dev/hello_world/src/.clangd
 
 # ============================================================
 # Vitis generated platform
