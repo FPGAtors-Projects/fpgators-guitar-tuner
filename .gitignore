@@ -1,0 +1,106 @@
+# ============================================================
+# OS / editor temporary files
+# ============================================================
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+*.bak
+
+# ============================================================
+# Vivado generated project directories
+# Keep .xpr, .srcs, .bd, .xci, HDL, XDC, and authored Tcl.
+# ============================================================
+.Xil/
+*.cache/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+
+# Block-design GUI layout; not hardware functionality
+*.bda
+*.srcs/sources_1/bd/*/ui/
+
+# Imported synthesis checkpoints / incremental-run state
+/platform_project/platform_project.srcs/utils_1/
+
+# Extracted hardware-export contents
+/platform_project/extracted/
+
+# Generated PS initialization files alongside the Vivado project
+/platform_project/ps7_init*
+
+# Unused reference copy; Vivado uses the imported project copy
+/Zybo-Z7-Master.xdc
+
+# ============================================================
+# Tool logs and local session state
+# ============================================================
+*.log
+*.jou
+*.str
+*.debug
+*.pid
+
+# Vitis workspace/component IDE state
+_ide/
+.metadata/
+.rigel/
+
+# ============================================================
+# Vitis generated platform
+#
+# Recreate from the Vivado-exported XSA.
+# This excludes generated BSPs, FSBL, SDT, and export copies.
+# Save any deliberate BSP/FSBL customizations separately first.
+# ============================================================
+/vitis_dev/platform/
+
+# ============================================================
+# Application / HLS build directories
+# ============================================================
+build/
+_build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+build.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+
+# ============================================================
+# Generated binaries and intermediate artifacts
+# ============================================================
+*.o
+*.obj
+*.a
+*.so
+*.elf
+*.elf.size
+*.map
+
+*.bit
+*.bin
+*.dcp
+*.ltx
+*.pdi
+*.xsa
+*.xclbin
+*.xo
+
+# Simulation waveforms
+*.wdb
+*.wlf
+*.vcd
+*.saif
+
+# ============================================================
+# Local directory listings
+# ============================================================
+/tree.txt
